@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arnaud Percheron — Développeur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+    <nav class="nav">
+      <div class="nav__logo">AP<span class="dot">.</span></div>
+      <ul class="nav__links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+    <header class="hero" id="home">
+      <div class="hero__noise"></div>
+      <div class="hero__content">
+        <p class="hero__tag">Développeur Fullstack</p>
+        <h1 class="hero__title">
+          <span class="hero__title--line">Arnaud</span>
+          <span class="hero__title--line accent">Percheron</span>
+        </h1>
+        <p class="hero__subtitle">
+          Je conçois, développe et déploie des applications web complètes.<br />
+          Du backend jusqu'à l'infrastructure, je mène mes projets avec méthode
+          et rigueur.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+          <a href="#cv" class="btn btn--ghost">Consulter mon CV</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════
+       À PROPOS
+  ════════════════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">01</span>
+          <h2 class="section__title">À propos</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__intro">
+              Développeur fullstack en reconversion assumée, je construis des
+              applications pensées pour durer.
+            </p>
+            <p>
+              Mon parcours avant le développement m'a appris à travailler sous
+              pression, à gérer plusieurs priorités simultanément et à garder le
+              cap dans des situations complexes. Ces réflexes, je les mets
+              aujourd'hui au service de mes projets techniques.
+            </p>
+            <p>
+              Titulaire du diplôme Développeur Web et Web Mobile, j'ai acquis
+              une base fullstack solide — du frontend au backend, en passant par
+              les bases de données et la conduite d'un projet complet de A à Z.
+            </p>
+            <p>
+              J'ai ensuite poussé plus loin : déploiement sur VPS, reverse proxy
+              avec Traefik et conteneurisation avancée avec Docker. Ce que je
+              construis, je le mets en production — et je sais pourquoi ça
+              tient.
+            </p>
+            <div class="about__stack">
+              <div class="formation" aria-label="Formation">
+                <p>Formation</p>
+                <span class="tag">HTML / CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP natif</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Git/Github</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Figma</span>
+              </div>
+              <div class="enplus" aria-label="En Cours">
+                <p>En plus</p>
+                <span class="tag-more">Java / Spring Boot</span>
+                <span class="tag-more">Traefik</span>
+                <span class="tag-more">VPS</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__visual" aria-hidden="true">
+            <div class="about__card">
+              <div class="about__card-inner">
+                <!-- Remplace par une vraie photo si tu veux -->
+                <div class="about__avatar">AP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       PROJETS
+  ════════════════════════════════════════ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">02</span>
+          <h2 class="section__title">Projets</h2>
+        </div>
+        <div class="projects__grid">
+          <!-- Projet 1 : déjà déployé -->
+          <article class="project-card project-card--live">
+            <div class="project-card__status">
+              <span class="status-dot"></span> En ligne
+            </div>
+            <div class="project-card__header">
+              <span class="project-card__number">01</span>
+              <div class="project-card__tags">
+                <span class="tag tag--dark">HTML / CSS</span>
+                <span class="tag tag--dark">JavaScript</span>
+                <span class="tag tag--dark">PHP</span>
+                <span class="tag tag--dark">MySQL</span>
+                <span class="tag tag--dark">MongoDB</span>
+                <span class="tag tag--dark">Docker</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">Esportify</h3>
+            <p class="project-card__desc">
+              Projet réalisé dans le cadre de ma formation : une application web
+              de gestion de tournois d'Esport. J'ai conçu et développé
+              l'application de A à Z, en front j'ai utilisé HTML / CSS et
+              JavaScript, et en backend j'ai utilisé PHP, MySQL pour la base de
+              données relationnelle MongoDB pour le non relationnelle et Docker
+              pour le déploiement sur mon VPS. L'application permet aux
+              utilisateurs de créer des tournois, de gérer les inscriptions et
+              de consulter les résultats en temps réel. Ce projet m'a permis de
+              mettre en pratique mes compétences fullstack et de comprendre les
+              enjeux du développement d'une application complète, du code à la
+              mise en production.
+            </p>
+            <div class="project-card__footer">
+              <a
+                href="https://esportify.apercheron.fr"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--primary btn--sm"
+              >
+                Voir le projet →
+              </a>
+              <a
+                href="https://github.com/Alkgorth/ECF-Esportify"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--ghost btn--sm"
+              >
+                GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Projet 2 : en cours (Java) -->
+          <article class="project-card project-card--wip">
+            <div class="project-card__status">
+              <span class="status-dot status-dot--wip"></span> En ligne
+            </div>
+            <div class="project-card__header">
+              <span class="project-card__number">02</span>
+              <div class="project-card__tags">
+                <span class="tag tag--dark">Java</span>
+                <span class="tag tag--dark">Spring Boot</span>
+                <span class="tag tag--dark">Docker</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">Calculatrice Java</h3>
+            <p class="project-card__desc">
+              Cette application console permet d'effectuer différentes opérations mathématiques de manière interactive. L'utilisateur peut choisir parmi plusieurs fonctionnalités via un menu et effectuer autant d'opérations qu'il le souhaite jusqu'à ce qu'il décide de quitter.
+            </p>
+            <div class="project-card__footer">
+              <a
+                href="https://calculatrice.apercheron.fr"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--primary btn--sm"
+              >
+                Voir le projet →
+              </a>
+              <a
+                href="https://github.com/Alkgorth/ExoProjet5_Calculatrice"
+                target="_blank"
+                rel="noopener"
+                class="btn btn--ghost btn--sm"
+              >
+                GitHub →
+              </a>
+              <span class="btn btn--ghost btn--sm btn--disabled"
+                >Bientôt disponible</span
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       CV
+  ════════════════════════════════════════ -->
+    <section class="section cv-section" id="cv">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">03</span>
+          <h2 class="section__title">Curriculum Vitae</h2>
+        </div>
+        <div class="cv__wrapper">
+          <!-- Aperçu PDF intégré -->
+          <div class="cv__viewer">
+            <iframe
+              src="cv/CV_Arnaud_Percheron.pdf"
+              title="CV — Prénom Nom"
+              class="cv__iframe"
+              loading="lazy"
+            ></iframe>
+            <div class="cv__fallback">
+              <p>Ton navigateur ne peut pas afficher le PDF directement.</p>
+              <a href="cv/CV_Arnaud_Percheron.pdf" target="_blank" class="btn btn--primary"
+                >Ouvrir le PDF</a
+              >
+            </div>
+          </div>
+          <!-- Bouton de téléchargement -->
+          <div class="cv__actions">
+            <a
+              href="cv/CV_Arnaud_Percheron.pdf"
+              download="CV_Prenom_Nom.pdf"
+              class="btn btn--primary"
+            >
+              ↓ Télécharger mon CV (PDF)
+            </a>
+            <a
+              href="cv/CV_Arnaud_Percheron.pdf"
+              target="_blank"
+              rel="noopener"
+              class="btn btn--ghost"
+            >
+              ↗ Ouvrir dans un nouvel onglet
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__number">04</span>
+          <h2 class="section__title">Contact</h2>
+        </div>
+        <div class="contact__content">
+          <p class="contact__intro">
+            Tu veux discuter d'un projet, d'une opportunité ou simplement
+            échanger ?
+          </p>
+          <a href="mailto:ton@email.com" class="contact__email">
+            ton@email.com
+          </a>
+          <div class="contact__links">
+            <a
+              href="https://github.com/tonprofil"
+              target="_blank"
+              rel="noopener"
+              class="contact__link"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://linkedin.com/in/tonprofil"
+              target="_blank"
+              rel="noopener"
+              class="contact__link"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Prénom Nom — Conçu et déployé sur VPS avec Docker</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

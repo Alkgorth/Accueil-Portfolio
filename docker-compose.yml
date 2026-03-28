@@ -1,0 +1,40 @@
+# docker-compose.yml — Portfolio statique
+# ─────────────────────────────────────────────────────────────────
+# Usage :
+#   docker compose up -d --build     → build + démarrage
+#   docker compose down               → arrêt
+#   docker compose logs -f portfolio  → logs en temps réel
+# ─────────────────────────────────────────────────────────────────
+
+services:
+  portfolio:
+    build:
+      context: .            # Utilise le Dockerfile à la racine du dossier
+      dockerfile: Dockerfile
+    container_name: portfolio
+    restart: unless-stopped  # Redémarre automatiquement si le VPS reboot
+    # ports:
+    #   - "3000:80"  # Commenté pour production (utilisé seulement en local)
+    networks:
+      - traefik-network
+    labels:
+      # ── Active ce conteneur dans Traefik ──────────────────────
+      - "traefik.enable=true"
+
+      # ── PHASE 1 : IP brute (sans domaine) ─────────────────────
+      # Toutes les requêtes vers / arrivent ici
+      - "traefik.http.routers.portfolio.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.portfolio.entrypoints=web"
+      # Priorité basse pour laisser passer les autres routes en premier
+      - "traefik.http.routers.portfolio.priority=1"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+
+      # ── PHASE 2 : À décommenter quand tu auras un domaine ─────
+      # - "traefik.http.routers.portfolio.rule=Host(`mondomaine.dev`)"
+      # - "traefik.http.routers.portfolio.entrypoints=websecure"
+      # - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      # - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+
+networks:
+  traefik-network:
+    external: true           # Réseau créé via : docker network create traefik-network

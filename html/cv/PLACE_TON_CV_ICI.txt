@@ -1,0 +1,6 @@
+Ce dossier contient ton CV en PDF.
+
+Renomme ton fichier PDF en "mon-cv.pdf" et place-le ici.
+Le fichier sera automatiquement servi par Nginx et accessible depuis la page portfolio.
+
+Chemin attendu : html/cv/mon-cv.pdf
