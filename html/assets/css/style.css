@@ -567,6 +567,10 @@ img {
   flex: 1;
 }
 
+.projet2 {
+  margin-top: 2.5rem;
+}
+
 .project-card__footer {
   margin-top: auto;
   padding-top: 0.5rem;
