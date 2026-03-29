@@ -1,7 +1,7 @@
 # Portfolio — Page d'accueil
 
 Page d'accueil statique (HTML/CSS/JS) servie par Nginx dans un conteneur Docker,
-intégré à Traefik comme reverse proxy.
+intégré à Traefik comme reverse proxy pour le déploiement sur VPS.
 
 ## Arborescence du projet
 
@@ -35,12 +35,27 @@ Dans `html/index.html`, remplace :
 - `tonprofil` → ton pseudo GitHub et LinkedIn
 - Les descriptions de projets
 - Les URLs des projets déployés
+- **Ajout récent** : Section "En plus" avec tags pour technologies supplémentaires (Java/Spring Boot, Traefik, VPS)
 
 ### 3. Construire et démarrer
+
+#### Développement local (avec port exposé)
+Pour tester sur votre machine :
 ```bash
 # Depuis le dossier portfolio/
+# Décommentez la ligne "ports:" dans docker-compose.yml
 docker compose up -d --build
 ```
+Accédez via `http://localhost:3000`.
+
+#### Production sur VPS (avec Traefik)
+Pour déployer sur votre VPS avec Traefik comme reverse proxy :
+```bash
+# Depuis le dossier portfolio/
+# Assurez-vous que "ports:" est commenté dans docker-compose.yml
+docker compose up -d --build
+```
+Traefik gérera le routage via les labels définis.
 
 ### 4. Vérifier
 ```bash
@@ -71,4 +86,4 @@ Dans `docker-compose.yml` :
 | JS vanilla| Animations légères, scroll actif |
 | Nginx Alpine | Serveur de fichiers statiques (~25MB) |
 | Docker    | Conteneurisation |
-| Traefik   | Reverse proxy (routing HTTP/HTTPS) |
+| Traefik   | Reverse proxy (routing HTTP/HTTPS, gestion des sous-domaines) |
