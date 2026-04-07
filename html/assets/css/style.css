@@ -794,11 +794,20 @@ img {
   .hero__cta {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .btn--primary {
+    margin-right: 0;
+  }
+
+  .btn--ghost {
+    margin-left: 0;
   }
 }
 
-/* Écrans très étroits (< 425px) - Adaptation du titre */
-@media (max-width: 426px) {
+/* Écrans très étroits (< 426px) - Adaptation du titre */
+@media (max-width: 455px) {
   .hero__title {
     font-size: clamp(3rem, 8vw, 4rem);
   }
@@ -809,5 +818,21 @@ img {
 
   .hero {
     padding: 6rem 1rem 3rem;
+  }
+
+  .hero__cta {
+    width: 100%;
+  }
+
+  .btn--primary {
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn--ghost {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
   }
 }
