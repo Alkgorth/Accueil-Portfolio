@@ -7,19 +7,19 @@ intégré à Traefik comme reverse proxy pour le déploiement sur VPS.
 
 ```
 portfolio/
-├── Dockerfile                  # Build de l'image Nginx
-├── docker-compose.yml          # Orchestration Docker + labels Traefik
-├── nginx.conf                  # Config Nginx (compression, cache, PDF)
-├── README.md                   # Ce fichier
-└── html/                       # Tout ce qui est servi par Nginx
-    ├── index.html              # Page principale (unique fichier HTML)
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── README.md
+└── html/
+    ├── index.html
     ├── assets/
     │   ├── css/
-    │   │   └── style.css       # Tous les styles
+    │   │   └── style.css
     │   └── js/
-    │       └── main.js         # JS minimal (scroll, animations)
+    │       └── main.js
     └── cv/
-        └── mon-cv.pdf          # ⚠️  À ajouter manuellement
+        └── mon-cv.pdf
 ```
 
 ## Mise en route
